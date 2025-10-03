@@ -1,0 +1,24 @@
+{
+    "name": "Tienda Campus Universitaria",
+    "short_name": "Tienda Campus",
+    "description": "Productos de papelería para estudiantes.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ECEFF1",
+    "theme_color": "#4A90E2",
+    "icons": [
+        {
+            "src": "icon-500.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-500.png",
+            "sizes": "500x500",
+            "type": "image/png"
+        }
+    ]
+}
+
+
+

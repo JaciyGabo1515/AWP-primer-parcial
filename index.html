@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Campus</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#4A90E2">
+</head>
+<body>
+
+    <header>
+        <h1>Tienda Campus</h1>
+        <nav>
+            <a href="#">Papelería</a>
+            <a href="#">Electrónica</a>
+            <a href="#">Snacks</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="product-container">
+        </div>
+    </main>
+
+    <footer>
+        <p>Universidad XYZ – Tienda Campus 2025</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        /* ==================================================================
+        PREGUNTAS Y RESPUESTAS REQUERIDAS
+        ==================================================================
+
+        1. ¿Cómo beneficia a los usuarios cargar rápido el App Shell aunque no haya conexión?
+        
+        RESPUESTA: Beneficia enormemente al usuario porque la aplicación se siente **instantánea y confiable**. [cite_start]Al tener el "esqueleto" (App Shell) guardado en la caché, la interfaz principal (menús, encabezado, etc.) se muestra de inmediato, incluso sin internet[cite: 5, 7, 46, 47]. [cite_start]Esto evita la frustrante "pantalla en blanco" y da la sensación de una aplicación nativa que siempre funciona[cite: 56, 57], mejorando drásticamente la experiencia de usuario.
+
+        2. ¿Qué diferencia hay entre el shell y los productos dinámicos?
+
+        [cite_start]RESPUESTA: La diferencia clave es que el **App Shell es la parte estática y fija de la interfaz**, mientras que los **productos son el contenido dinámico y variable**[cite: 58].
+        
+        - [cite_start]El **Shell** (encabezado, menú, pie de página) es como el marco de un cuadro: siempre es el mismo, se carga una vez y se guarda en caché para un acceso instantáneo[cite: 61, 63, 64, 65].
+        - [cite_start]Los **Productos** (contenido dinámico) son como la pintura dentro del marco: cambian constantemente, dependen de una conexión a la red para actualizarse (o se cargan desde una caché de datos) y se insertan dentro del Shell ya existente[cite: 6, 62, 72, 73].
+        */
+
+        // REGISTRO DEL SERVICE WORKER
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => console.log('Service Worker registrado con éxito.'))
+                    .catch(err => console.error('Error en el registro del Service Worker:', err));
+            });
+        }
+    </script>
+</body>
+</html>
